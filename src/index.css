@@ -1,0 +1,169 @@
+main {
+    min-height: 80vh;
+}
+
+/* h1, h2, h3 style */
+.heading-text {
+    color: #1679AB;
+}
+
+
+/* Header style */
+.nav-no-spacing .nav-item:first-child {
+    margin-left: 5rem;
+}
+
+.nav-no-spacing .nav-item:last-child {
+    margin-right: 5rem;
+}
+
+.nav-no-spacing .nav-item {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    text-decoration: none;
+}
+
+
+/* Carousel text style */
+.carousel-text {
+    color: white;
+}
+
+
+/* For all card texts */
+.card a, .card a:hover {
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: #1679AB;
+}
+
+
+/* Proza dot pagination */
+.dot-pagination {
+    text-align: center;
+}
+  
+.dot, .active-dot {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+}
+  
+.active-dot {
+    background-color: #007bff;
+}
+
+.dot {
+    background-color: #ccc;
+}
+
+
+/* ruhaniyat and adebi-syn */
+.card-group-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Ensure container takes full width */
+}
+
+.card-group-transition {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* proza.css */
+.proza_card-group-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.proza_card-group-transition {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+  
+
+/* import React, { useState } from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import articles from '../../articles';
+import { Link } from 'react-router-dom';
+
+
+function Proza() {
+    const [activePage, setActivePage] = useState(1);
+    const itemsPerPage = 6;
+    const totalPages = Math.ceil(articles.length / itemsPerPage);
+
+    const handleNext = () => {
+        if (activePage < totalPages) {
+            setActivePage(activePage + 1);
+        }
+    };
+
+    const handlePrev = () => {
+        if (activePage > 1) {
+            setActivePage(activePage - 1);
+        }
+    };
+
+    const startIndex = (activePage - 1) * itemsPerPage;
+    const currentArticles = articles.slice(startIndex, startIndex + itemsPerPage);
+
+    return (
+        <Container>
+            <hr />
+            <h2 className='mt-5 heading-text'>Проза</h2>
+            
+            <div className="proza_card-group-container">
+                <Row className="proza_card-group-transition" style={{ transform: `translateX(-${(activePage - 1) * 100}%)` }}>
+                    {currentArticles.map((article, index) => (
+                        <Col md={4} key={index} className='p-0'>
+                            <Card className='my-3' style={{ border: "none", marginLeft: "2rem" }}>
+                                <Row>
+                                    <Col md={5}>
+                                        <Link to={`/proza/:${article._id}`}>
+                                            <Card.Img src={article.image} alt={article.image} style={{ borderRadius: "50%" }} />
+                                        </Link>
+                                    </Col>
+
+                                    <Col md={7} className='d-flex align-items-center p-0'>
+                                        <Card.Body className='p-0'>
+                                            <small className="text-muted text-center">{article.date}</small>
+                                            <Link to={`/proza/:${article._id}`}>
+                                                <Card.Title style={{ fontSize: "x-small" }} className='py-1 pb-3 pe-3'>{article.title}</Card.Title>
+                                            </Link>
+                                        </Card.Body>
+                                    </Col>
+                                </Row>
+                            </Card>
+                        </Col>
+                    ))}
+                </Row>
+            </div>
+
+            <div className="dot-pagination mt-4">
+                {[...Array(totalPages).keys()].map(number => (
+                    <span
+                        key={number + 1}
+                        className={number + 1 === activePage ? 'active-dot' : 'dot'}
+                        onClick={() => setActivePage(number + 1)}
+                    />
+                ))}
+            </div>
+
+            <div className="carousel-controls mt-3">
+                <button className="carousel-control-prev" onClick={handlePrev} disabled={activePage === 1}>&#10094;</button>
+                <button className="carousel-control-next" onClick={handleNext} disabled={activePage === totalPages}>&#10095;</button>
+            </div>
+        </Container>
+    );
+}
+
+export default Proza; */
